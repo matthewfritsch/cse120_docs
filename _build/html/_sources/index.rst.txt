@@ -12,6 +12,7 @@ Welcome to Matt's CSE120 documentation!
 
    linux_help
    timeshare_help
+   FAQ_topics
 
 Indices and tables
 ==================
