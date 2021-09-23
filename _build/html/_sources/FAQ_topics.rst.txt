@@ -40,11 +40,11 @@ make
     - make can define a set of commands to allow you to run the first one, the second one, or the third one without typing all that nonsense.
 - Utilizing ``make`` is really easy. In a terminal, in the directory containing a Makefile (a file for defining all of our make shortcuts), a user can define a set of commands to run to make the development process much easier.
     - For example, in a previous class, my professor last quarter defined the following:
-        - ``make build``  which compiles all the code, but will NOT run it
-        - ``make check``  which compiles all the code, runs it, and checks to see if the output is correct
-        - ``make clean``  which deletes all the binary files that are no longer needed
-        - ``make run``    which compiles all the code, and then runs it
-        - ``make submit`` which compiles all the code, runs it, and submits it to the professor
+        * ``make build``  which compiles all the code, but will NOT run it
+        * ``make check``  which compiles all the code, runs it, and checks to see if the output is correct
+        * ``make clean``  which deletes all the binary files that are no longer needed
+        * ``make run``    which compiles all the code, and then runs it
+        * ``make submit`` which compiles all the code, runs it, and submits it to the professor
     - So you could type ``make check`` in the terminal when looking at the project, and it would tell you whether you got it right or not.
     
 ssh
