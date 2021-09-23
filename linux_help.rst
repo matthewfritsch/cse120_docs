@@ -15,17 +15,20 @@ Installing Linux on your Computer
 
 - On Windows
     - Windows Subsystem for Linux (WSL)
-        - TODO
+        - Please see this page for info on installing Linux as a subsystem on your Windows installation: (https://docs.microsoft.com/en-us/windows/wsl/install)
+        - I can assist if need be, but I have Linux installed separately from Windows, so I may not be very useful. Google is your friend.
     - Virtual Machine (VM)
-        - TODO
+        - Please see this video for info on installing Linux in a virtual machine on your Windows installation: (https://www.youtube.com/watch?v=x5MhydijWmc)
+        - As above, I can try to assist if need be.
 
 - On MacOS
     - Virtual Machine (VM)
-        - TODO
+        - Please see this video for info on installing Linux in a virtual machine on your MacOS installation: (https://www.youtube.com/watch?v=04ZNAKmm0dI)
+        - I am full of hatred for MacOS, so if you want to ask me questions on solving problems for this, you have to tell me if you have a dog (or dogs) and also send a picture of that dog (or dogs)
     - Installing RISC-V packages on your Mac
-        - TODO
+        - Once we know what RISC-V sim we're using, I'll get on this chief.
 
 - Installing Linux on your machine
-    - TODO
+    - Holding off on this, because it's kind of a long explanation. I'm trying to make sure I word things correctly so the instructions are very clear. There are YouTube videos on this, but I am hesitant to recommend something unless it takes all the correct precautions. It's not that the installation is dangerous, but I assume you don't want to delete everything on your computer.
 
 - I promise I'll update these ASAP. Hold me to it, DM me hate mail if I don't update these.
