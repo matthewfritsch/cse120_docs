@@ -5,31 +5,30 @@ FAQ Topics
 
 RISC
 --------------------------------
-- You may end up seeing RISC used lots of different ways: RISC, RISC-V, RISC ISA, etc. These all mean different things, but this definition is just for defining the general topic of RISC.
-- Imagine assembly language as a real, speakable language. That would make each of the instructions (add, mul, mov, etc.) as individual letters, and combining groups of these letters together would make a speakable word, or runnable function. Kinda make sense? So maybe a function that checks if an integer is odd is analogous to a word, and the main branch of code that runs all of our defined functions is a sentence.
-- x86-64, the assembly architecture that runs in Intel and AMD processors, is like a language with over 1000 letters: that's a whole shitton of letters! We don't need to remember all of these letters, but our processors do, which sounds like a nightmare to me.
-    - Remember, 'letters' are analogous to 'instructions', so it's less about remembering the shape of a letter and more about remembering how to perform an operation when given an instruction. e.g if someone tells you to write the letter 'b', you're gonna know what it looks like and how it sounds to say it. But when a computer is provided the instruction ``mov ax,8``, it needs to know how to move things, find where the register ``ax`` is, and then put ``8`` there. 
 - **RISC** is an acronym for 'Reduced Instruction Set Computing'. The RISC concept was developed much later than x86-64 with the entire goal being: use much a much smaller instruction set. The benefits of this are, of course, that our processors don't need to be programmed to know lots and lots of instructions, they just need to know a few. 
+    - Imagine assembly language as a real, speakable language. That would make each of the instructions (add, mul, mov, etc.) as individual letters, and combining groups of these letters together would make a speakable word, or runnable function. Kinda make sense? So maybe a function that checks if an integer is odd is analogous to a word, and the main branch of code that runs all of our defined functions is a sentence.
+    - x86-64, the assembly architecture that runs in Intel and AMD processors, is like a language with over 1000 letters: that's a whole shitton of letters! We don't need to remember all of these letters, but our processors do, which sounds like a nightmare to me.
+        - Remember, 'letters' are analogous to 'instructions', so it's less about remembering the shape of a letter and more about remembering how to perform an operation when given an instruction. e.g if someone tells you to write the letter 'b', you're gonna know what it looks like and how it sounds to say it. But when a computer is provided the instruction ``mov ax,8``, it needs to know how to move things, find where the register ``ax`` is, and then put ``8`` there. 
     - To further the analogy above, RISC-V or MIPS (which are both RISC assembly languages) have a smaller set of letters, which means the processors built on RISC-V/MIPS don't need to remember so many different letters to create the same sentences.
 
 RISC ISA
 --------------------------------
-- RISC, as explained above, stands for Reduced Instruction Set Computing. ISA stands for Instruction Set Architecture. The ISA, in our context, is like the index of all instructions you can use in a language. The x86-64 ISA consists of thousands of different instructions, and the RISC ISA consists of much, much fewer than this.
+- RISC, as explained above, stands for Reduced Instruction Set Computing. **ISA** stands for Instruction Set Architecture. The ISA, in our context, is like the index of all instructions you can use in a language. The x86-64 ISA consists of thousands of different instructions, and the **RISC ISA** consists of much, much fewer than this.
 
 RISC-V
 --------------------------------
-- RISC-V is a specific kind of RISC assembly language. While RISC is more of a concept/set of expectations you can have about a particular assembly language, RISC-V is an actual language that follows these expectations. 
+- **RISC-V** is a specific kind of RISC assembly language. While RISC is more of a concept/set of expectations you can have about a particular assembly language, RISC-V is an actual language that follows these expectations. 
 - RISC-V only has 47 instructions. The thousands of instructions in x86-64 that do NOT exist in RISC-V have to be written by hand. Luckily, these 47 are the absolute most common instructions used, so don't fret.
 
 GCC
 --------------------------------
-- It's just occurred to me that this is not in alphabetical order. Bug me about this if it bothers you. Sorry D:
-- GCC stands for "GNU Compiler Collection". GNU is a collection of free software from the Free Software Foundation, so think of GCC as "a collection of free code compilers from a group of people who make free code-related programs". GCC in our experience will probably refer to the "GNU C Compiler", which as the name states, will compile C code into executable binary code.
+- *It's just occurred to me that this is not in alphabetical order. Bug me about this if it bothers you. Sorry D:*
+- **GCC** stands for "GNU Compiler Collection". GNU is a collection of free software from the Free Software Foundation, so think of GCC as "a collection of free code compilers from a group of people who make free code-related programs". GCC in our experience will probably refer to the "GNU C Compiler", which as the name states, will compile C code into executable binary code.
 - GCC is the most common way to compile C/C++/other languages on Linux machines. You may actually have it installed on your MacOS machine too (open the terminal and type ``gcc --version`` and it may provide GCC version information)
 
 Linux
 --------------------------------
-- Linux is an operating system kernel. You don't super need to know what a kernel is, but just know that it's the core of the operating system experience. Windows uses the Windows NT kernel, and MacOS uses the XNU kernel. XNU and Linux are both based on Unix, so there is a lot of overlap in how MacOS and Linux work. 
+- **Linux** is an operating system kernel. You don't super need to know what a kernel is, but just know that it's the core of the operating system experience. Windows uses the Windows NT kernel, and MacOS uses the XNU kernel. XNU and Linux are both based on Unix, so there is a lot of overlap in how MacOS and Linux work. 
 - If you're panicking because you've only used Windows/MacOS for your entire life, that's totally okay I promise! But you may want to consider diving head-first into the Linux user experience this quarter. As our professor mentioned: it is very, very unlikely the devices you work on in the future will be running Windows or MacOS. Please see the "linux_help" page on this site for further info :)
 
 make
@@ -46,6 +45,7 @@ make
         - ``make clean``  which deletes all the binary files that are no longer needed
         - ``make run``    which compiles all the code, and then runs it
         - ``make submit`` which compiles all the code, runs it, and submits it to the professor
+    - So you could type ``make check`` in the terminal when looking at the project, and it would tell you whether you got it right or not.
     
 ssh
 --------------------------------
