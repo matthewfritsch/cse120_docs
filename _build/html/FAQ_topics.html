@@ -36,6 +36,108 @@
 <h1>FAQ Topics<a class="headerlink" href="#faq-topics" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>This page is for things like “RISC ISA” and “GCC” that was foreign and concerning for some in the discord chat. Just DM me on discord to add more things here (macmoholic#2221)</p></li>
+<li><dl class="simple">
+<dt>RISC</dt><dd><ul>
+<li><p>You may end up seeing RISC used lots of different ways: RISC, RISC-V, RISC ISA, etc. These all mean different things, but this definition is just for defining the general topic of RISC.</p></li>
+<li><p>Imagine assembly language as a real, speakable language. That would make each of the instructions (add, mul, mov, etc.) as individual letters, and combining groups of these letters together would make a speakable word, or runnable function. Kinda make sense? So maybe a function that checks if an integer is odd is analogous to a word, and the main branch of code that runs all of our defined functions is a sentence.</p></li>
+<li><dl class="simple">
+<dt>x86-64, the assembly architecture that runs in Intel and AMD processors, is like a language with over 1000 letters: that’s a whole shitton of letters! We don’t need to remember all of these letters, but our processors do, which sounds like a nightmare to me.</dt><dd><ul>
+<li><p>Remember, ‘letters’ are analogous to ‘instructions’, so it’s less about remembering the shape of a letter and more about remembering how to perform an operation when given an instruction. e.g if someone tells you to write the letter ‘b’, you’re gonna know what it looks like and how it sounds to say it. But when a computer is provided the instruction <code class="docutils literal notranslate"><span class="pre">mov</span> <span class="pre">ax,8</span></code>, it needs to know how to move things, find where the register <code class="docutils literal notranslate"><span class="pre">ax</span></code> is, and then put <code class="docutils literal notranslate"><span class="pre">8</span></code> there.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>RISC</strong> is an acronym for ‘Reduced Instruction Set Computing’. The RISC concept was developed much later than x86-64 with the entire goal being: use much a much smaller instruction set. The benefits of this are, of course, that our processors don’t need to be programmed to know lots and lots of instructions, they just need to know a few.</dt><dd><ul>
+<li><p>To further the analogy above, RISC-V or MIPS (which are both RISC assembly languages) have a smaller set of letters, which means the processors built on RISC-V/MIPS don’t need to remember so many different letters to create the same sentences.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RISC ISA</dt><dd><ul>
+<li><p>RISC, as explained above, stands for Reduced Instruction Set Computing. ISA stands for Instruction Set Architecture. The ISA, in our context, is like the index of all instructions you can use in a language. The x86-64 ISA consists of thousands of different instructions, and the RISC ISA consists of much, much fewer than this.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RISC-V</dt><dd><ul>
+<li><p>RISC-V is a specific kind of RISC assembly language. While RISC is more of a concept/set of expectations you can have about a particular assembly language, RISC-V is an actual language that follows these expectations.</p></li>
+<li><p>RISC-V only has 47 instructions. The thousands of instructions in x86-64 that do NOT exist in RISC-V have to be written by hand. Luckily, these 47 are the absolute most common instructions used, so don’t fret.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>GCC</dt><dd><ul>
+<li><p>It’s just occurred to me that this is not in alphabetical order. Bug me about this if it bothers you. Sorry D:</p></li>
+<li><p>GCC stands for “GNU Compiler Collection”. GNU is a collection of free software from the Free Software Foundation, so think of GCC as “a collection of free code compilers from a group of people who make free code-related programs”. GCC in our experience will probably refer to the “GNU C Compiler”, which as the name states, will compile C code into executable binary code.</p></li>
+<li><p>GCC is the most common way to compile C/C++/other languages on Linux machines. You may actually have it installed on your MacOS machine too (open the terminal and type <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">--version</span></code> and it may provide GCC version information)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Linux</dt><dd><ul>
+<li><p>Linux is an operating system kernel. You don’t super need to know what a kernel is, but just know that it’s the core of the operating system experience. Windows uses the Windows NT kernel, and MacOS uses the XNU kernel. XNU and Linux are both based on Unix, so there is a lot of overlap in how MacOS and Linux work.</p></li>
+<li><p>If you’re panicking because you’ve only used Windows/MacOS for your entire life, that’s totally okay I promise! But you may want to consider diving head-first into the Linux user experience this quarter. As our professor mentioned: it is very, very unlikely the devices you work on in the future will be running Windows or MacOS. Please see the “linux_help” page on this site for further info :)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>make</dt><dd><ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">make</span></code> is a program made by the Free Software Foundation, just like GCC. It takes code written in a language, and performs operations for you to make compiling, cleaning, etc. easier and shorter.</dt><dd><ul>
+<li><p>Imagine you have a folder with a single program, <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code>. You want to compile it and run it. So, you could probably run the GCC compiler to make it into an executable program: <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">main.cpp</span> <span class="pre">-o</span> <span class="pre">myprogram</span></code>. You type that into your Linux terminal, and ta-da! You have runnable code.</p></li>
+<li><p>However, now you also want to compile it and turn on warnings. So you re-type the whole thing but with an additional argument: <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">main.cpp</span> <span class="pre">-o</span> <span class="pre">myprogram</span> <span class="pre">-Wall</span> <span class="pre">-Wextra</span></code>, which works fine.</p></li>
+<li><p>Your boss provides you a set of new arguments they want your code compiled with: <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">main.cpp</span> <span class="pre">-o</span> <span class="pre">myprogram</span> <span class="pre">-pedantic</span> <span class="pre">-Wall</span> <span class="pre">-Wextra</span> <span class="pre">-Wcast-align</span> <span class="pre">-Wcast-qual</span> <span class="pre">-Wctor-dtor-privacy</span> <span class="pre">-Wdisabled-optimization</span> <span class="pre">-Wformat=2</span> <span class="pre">-Winit-self</span> <span class="pre">-Wlogical-op</span> <span class="pre">-Wmissing-declarations</span> <span class="pre">-Wmissing-include-dirs</span> <span class="pre">-Wnoexcept</span> <span class="pre">-Wold-style-cast</span> <span class="pre">-Woverloaded-virtual</span> <span class="pre">-Wredundant-decls</span> <span class="pre">-Wshadow</span> <span class="pre">-Wsign-conversion</span> <span class="pre">-Wsign-promo</span> <span class="pre">-Wstrict-null-sentinel</span> <span class="pre">-Wstrict-overflow=5</span> <span class="pre">-Wswitch-default</span> <span class="pre">-Wundef</span> <span class="pre">-Werror</span> <span class="pre">-Wno-unused</span></code>. You shit a brick, because there’s no chance in hell you’re typing that every single time you need to compile a single program.</p></li>
+<li><p>make can define a set of commands to allow you to run the first one, the second one, or the third one without typing all that nonsense.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Utilizing <code class="docutils literal notranslate"><span class="pre">make</span></code> is really easy. In a terminal, in the directory containing a Makefile (a file for defining all of our make shortcuts), a user can define a set of commands to run to make the development process much easier.</dt><dd><ul>
+<li><dl class="simple">
+<dt>For example, in a previous class, my professor last quarter defined the following:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build</span></code>  which compiles all the code, but will NOT run it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">check</span></code>  which compiles all the code, runs it, and checks to see if the output is correct</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>  which deletes all the binary files that are no longer needed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">run</span></code>    which compiles all the code, and then runs it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">submit</span></code> which compiles all the code, runs it, and submits it to the professor</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ssh</dt><dd><ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ssh</span></code> is a program that means “Secure SHell”. It’s a way of connecting your computer to another computer, and performing commands on that other computer.</dt><dd><ul>
+<li><p>Example time: imagine a programming workplace where 60 different developers need a ton of computing power. Instead of creating lots of big, powerful computers for every individual worker to use, the workplace creates a single supercomputer. “Well 60 workers can’t possibly share a single computer” you say? Sure they can! Each developer gets a cheap laptop/uses a home computer, and will use <code class="docutils literal notranslate"><span class="pre">ssh</span></code> to remotely connect to the computer.</p></li>
+<li><p>The above example is based around our UCSC UNIX Timeshare, where the single supercomputer is the machine the timeshare is running on, and the 60 developers are all the students and staff of the UCSC CSE courses. The “cheap laptops/home computers” I referred to are any/all of the devices we are using to take the course, so you can absolutely install ssh on your machine. But don’t do it yet. I’ll update this page when we know what we need to ssh into.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> is a terminal-only program. We’re most likely to use this when working on the UCSC Unix Timeshare. As this becomes a much more important factor in the quarter, like I said, I will update this. If you’re looking for ways to connect to the Unix Timeshare, please find the “timeshare_help” page on this site. It uses <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, or <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 
