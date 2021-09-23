@@ -7,16 +7,9 @@ Welcome to Matt's CSE120 documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
 
    linux_help
    timeshare_help
    FAQ_topics
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
