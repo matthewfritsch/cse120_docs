@@ -14,9 +14,7 @@ Installing Linux on your Computer
 ----------------------------------------
 
 - Virtual Machine Install (RECOMMENDED)
-    .. raw:: html
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FKdAumOtmSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    - Watch this video I made for a step-by-step guide to install Linux on VirtualBox: https://youtu.be/eSqxaE2zzWs
 
 - Other options
     - You can also install Ubuntu on a flash drive, which is very convenient I think. Give it a whirl sometime (use Balena-Etcher to copy the installed to a flash drive, and then reboot into the flash drive through your BIOS)
@@ -47,7 +45,7 @@ Using the Linux Terminal
     - **grep**
         - Filters down text for specific lines. Use ``cat main.c | grep 'hello'`` to only print out lines from "main.c" containing the word "hello"
     - **gcc**
-        - Compiles a C program to executable code. Use ``gcc main.c -o my_executable`` to compile "main.c" into an executable code file called "my_executable". You can run "my_executable" with ``./my_executable`
+        - Compiles a C program to executable code. Use ``gcc main.c -o my_executable`` to compile "main.c" into an executable code file called "my_executable". You can run "my_executable" with ``./my_executable``
     - **apt**
         - The Ubuntu package manager. Use ``sudo apt install vim`` to install a package called "vim"
     - **snap**
