@@ -11,5 +11,9 @@ Welcome to Matt's CSE120 documentation!
    :caption: Contents:
 
    linux_help
+   git
    timeshare_help
    FAQ_topics
+   lec0
+   lec1
+
