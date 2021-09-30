@@ -55,61 +55,12 @@
 <h2>Installing Linux on your Computer<a class="headerlink" href="#installing-linux-on-your-computer" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><dl>
-<dt>Virtual Machine Install</dt><dd><iframe width="560" height="315" src="https://www.youtube.com/embed/FKdAumOtmSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></dd>
+<dt>Virtual Machine Install (RECOMMENDED)</dt><dd><iframe width="560" height="315" src="https://www.youtube.com/embed/FKdAumOtmSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>On Windows</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt>Windows Subsystem for Linux (WSL)</dt><dd><ul>
-<li><p>Please see this page for info on installing Linux as a subsystem on your Windows installation: (<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">https://docs.microsoft.com/en-us/windows/wsl/install</a>)</p></li>
-<li><p>I can assist if need be, but I have Linux installed separately from Windows, so I may not be very useful. Google is your friend.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Virtual Machine (VM)</dt><dd><ul>
-<li><p>Please see this video for info on installing Linux in a virtual machine on your Windows installation: (<a class="reference external" href="https://www.youtube.com/watch?v=x5MhydijWmc">https://www.youtube.com/watch?v=x5MhydijWmc</a>)</p></li>
-<li><p>As above, I can try to assist if need be.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>On MacOS</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt>Virtual Machine (VM)</dt><dd><ul>
-<li><p>Please see this video for info on installing Linux in a virtual machine on your MacOS installation: (<a class="reference external" href="https://www.youtube.com/watch?v=04ZNAKmm0dI">https://www.youtube.com/watch?v=04ZNAKmm0dI</a>)</p></li>
-<li><p>I am full of hatred for MacOS, so if you want to ask me questions on solving problems for this, you have to tell me if you have a dog (or dogs) and also send a picture of that dog (or dogs)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Installing RISC-V packages on your Mac</dt><dd><ul>
-<li><p>Once we know what RISC-V sim we’re using, I’ll get on this chief.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>On Any</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt>Installing Linux on a USB stick</dt><dd><ul>
-<li><p>Updating today!</p></li>
-</ul>
-</dd>
-</dl>
-</li>
+<dt>Other options</dt><dd><ul class="simple">
+<li><p>You can also install Ubuntu on a flash drive, which is very convenient I think. Give it a whirl sometime (use Balena-Etcher to copy the installed to a flash drive, and then reboot into the flash drive through your BIOS)</p></li>
 </ul>
 </dd>
 </dl>
@@ -119,8 +70,103 @@
 <section id="using-the-linux-terminal">
 <h2>Using the Linux Terminal<a class="headerlink" href="#using-the-linux-terminal" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>How to access it</p></li>
-<li><p>Commands to know</p></li>
+<li><dl class="simple">
+<dt>Summary</dt><dd><ul>
+<li><p>Check the video I sent for the VM install to see the commands being used. Below is just a cheat sheet</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Commands cheat sheet</dt><dd><ul>
+<li><dl class="simple">
+<dt><strong>ls</strong></dt><dd><ul>
+<li><p>Lists files in the current directory</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>cd</strong></dt><dd><ul>
+<li><p>Changes directory to the specified location. Use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">my_folder</span></code> to enter a folder called “my_folder”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>mkdir</strong></dt><dd><ul>
+<li><p>Makes a directory with the specified name. Use <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">my_folder</span></code> to make a folder called “my_folder”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>rmdir</strong></dt><dd><ul>
+<li><p>Removed a directory with the specified name. Use <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">my_folder</span></code> to delete a folder called “my_folder” provided the folder is empty</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>touch</strong></dt><dd><ul>
+<li><p>Creates a file provided a specified name. Use <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">main.c</span></code> to create a C code file called “main.c”. Works with any extension, but is generally just used to make text-based files</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>rm</strong></dt><dd><ul>
+<li><p><strong>PERMANENTLY</strong> deletes a file provided a specified name. Use <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">main.c</span></code> to delete a file called “main.c”, or use <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">my_folder</span></code> to recursively delete all files in a folder called “my_folder”, including the folder</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>find</strong></dt><dd><ul>
+<li><p>Searches for file names from a given directory. Use <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">my_folder</span> <span class="pre">-name</span> <span class="pre">&quot;*bob*&quot;</span></code> for any file that contains the word “bob”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>cat</strong></dt><dd><ul>
+<li><p>Prints out all the text in a given file. Use <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">main.c</span></code> to print out all the code from a C code file called “main.c”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>grep</strong></dt><dd><ul>
+<li><p>Filters down text for specific lines. Use <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">main.c</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">'hello'</span></code> to only print out lines from “main.c” containing the word “hello”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>gcc</strong></dt><dd><ul>
+<li><p>Compiles a C program to executable code. Use <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">main.c</span> <span class="pre">-o</span> <span class="pre">my_executable</span></code> to compile “main.c” into an executable code file called “my_executable”. You can run “my_executable” with <a href="#id1"><span class="problematic" id="id2">``</span></a>./my_executable`</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>apt</strong></dt><dd><ul>
+<li><p>The Ubuntu package manager. Use <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">vim</span></code> to install a package called “vim”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>snap</strong></dt><dd><ul>
+<li><p>An additional package manager on Ubuntu. Use <code class="docutils literal notranslate"><span class="pre">snap</span> <span class="pre">install</span> <span class="pre">code</span></code> to install a program called “code”. Some programs require a classic install, like <code class="docutils literal notranslate"><span class="pre">snap</span> <span class="pre">install</span> <span class="pre">--classic</span> <span class="pre">code</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 </section>
