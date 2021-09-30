@@ -13,6 +13,11 @@ What is Linux?
 Installing Linux on your Computer
 ----------------------------------------
 
+- Virtual Machine Install
+    .. raw:: html
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FKdAumOtmSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 - On Windows
     - Windows Subsystem for Linux (WSL)
         - Please see this page for info on installing Linux as a subsystem on your Windows installation: (https://docs.microsoft.com/en-us/windows/wsl/install)
@@ -28,7 +33,13 @@ Installing Linux on your Computer
     - Installing RISC-V packages on your Mac
         - Once we know what RISC-V sim we're using, I'll get on this chief.
 
-- Installing Linux on your machine
-    - Holding off on this, because it's kind of a long explanation. I'm trying to make sure I word things correctly so the instructions are very clear. There are YouTube videos on this, but I am hesitant to recommend something unless it takes all the correct precautions. It's not that the installation is dangerous, but I assume you don't want to delete everything on your computer.
+- On Any
+    - Installing Linux on a USB stick
+        - Updating today!
 
-- I promise I'll update these ASAP. Hold me to it, DM me hate mail if I don't update these.
+Using the Linux Terminal
+-----------------------------------
+
+- How to access it
+
+- Commands to know
