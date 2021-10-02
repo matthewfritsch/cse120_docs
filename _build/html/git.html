@@ -35,26 +35,126 @@
             
   <section id="using-git">
 <h1>Using git<a class="headerlink" href="#using-git" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Bug me if I don’t update this.</p></li>
-</ul>
 <section id="what-is-git">
 <h2>What is git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Bug me if I don’t update this.</p></li>
+<li><p><strong>git</strong> is a program developed for version control in developing programs. It’s widely used in the industry for collaborating on projects, as well as managing multiple versions of a single project.</p></li>
+<li><p><strong>git</strong> is relatively easy to use on a regular basis, but there are situations where it can become difficult to solve a problem (serious merge conflicts, for example). In our course, we will likely have very few (if any) of these challenges.</p></li>
 </ul>
 </section>
 <section id="how-does-git-differ-from-github">
 <h2>How does git differ from GitHub?<a class="headerlink" href="#how-does-git-differ-from-github" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Bug me if I don’t update this.</p></li>
+<li><p>When working with <strong>git</strong>, a user creates a “repository” of their code. This is often a folder where all of the code sits, and the code can automatically switch between different versions of itself. This repository is stored on your local machine, somewhere on your drive.</p></li>
+<li><p>GitHub is a website for storing your git repositories remotely. This way, if your device was destroyed, all of the code would be saved.</p></li>
+<li><p>GitHub also has lots of tools to make it easy to collaborate with others. For example, if two developers are not working on the same network, it’s very easy for user A to allow user B to develop on their mutual GitHub repository. There also exists a number of project development tools for aiding in the process (like task boards).</p></li>
 </ul>
 </section>
 <section id="how-do-i-use-git">
 <h2>How do I use git?<a class="headerlink" href="#how-do-i-use-git" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Bug me if I don’t update this.</p></li>
+<li><dl class="simple">
+<dt>Working with git isn’t super challenging. The first thing you want to answer for yourself is this:</dt><dd><ul>
+<li><p>Do I want to pull code from an already existing git repository, or</p></li>
+<li><p>Do I want to create a new git repository?</p></li>
 </ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="i-want-to-pull-code-from-an-already-existing-repository">
+<h3>I want to pull code from an already existing repository.<a class="headerlink" href="#i-want-to-pull-code-from-an-already-existing-repository" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Cool! This is very easy. In your terminal, type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;repository</span> <span class="pre">link&gt;</span></code>. You can also use an ssh key, but I’m going to focus on https repo links.</p></li>
+<li><dl>
+<dt>If you entered the link correctly, you should see something along these lines:</dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;folder_name&#39;...
+remote: Enumerating objects: 209, done.
+remote: Counting objects: 100% (209/209), done.
+remote: Compressing objects: 100% (134/134), done.
+remote: Total 209 (delta 120), reused 163 (delta 74), pack-reused 0
+Receiving objects: 100% (209/209), 286.43 KiB | 2.75 MiB/s, done.
+Resolving deltas: 100% (120/120), done.
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>You should now have a folder with the same name as ‘folder_name’. In this folder is all the code you need to work with.</p></li>
+<li><dl class="simple">
+<dt><strong>NOTE</strong>: If you are trying to take your already existing code and put it on GitHub/similar, you want to follow the steps above! Before you do them however,</dt><dd><ul class="simple">
+<li><p>Open your GitHub</p></li>
+<li><p>Create a new repository on GitHub</p></li>
+<li><p>Copy the URL or SSH key provided, as this will be your URL to use in the above steps.</p></li>
+<li><p>Do the above steps to clone the empty repository</p></li>
+<li><p>Move your current code files into the empty folder</p></li>
+<li><p>Follow the below steps, starting <strong>after</strong> the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> part.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="i-want-to-make-my-own-git-repository">
+<h3>I want to make my own git repository<a class="headerlink" href="#i-want-to-make-my-own-git-repository" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Awesome. This is a few more commands, but I promise I will try to help make sense of each one for ya.</p></li>
+</ul>
+<ul>
+<li><dl class="simple">
+<dt>Initialize the repository</dt><dd><ul class="simple">
+<li><p>Go to the folder with your code, or the folder where your code will be (see the Linux help page for doing this with terminal. <code class="docutils literal notranslate"><span class="pre">cd</span></code> and <code class="docutils literal notranslate"><span class="pre">ls</span></code> will be helpful)</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>, which will add the necessary files to identify this folder as a git repository. Now, running git commands will work!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Make the necessary changes</dt><dd><ul class="simple">
+<li><p>This is all you. Whatever code you need to write, files you need to add, now is when you do them. Move on to the next step as soon as you’re ready to save your work in the repository.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Stage your files to be saved</dt><dd><ul>
+<li><dl>
+<dt>It’s time to choose what files you want to commit to the repository. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to show what your repository looks like. Here is an example output:</dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>On branch master
+
+No commits yet
+
+Untracked files:
+(use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    thing.c
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>From the list of files under “Untracked files”, you want to add each file you intend to commit to the repository. If you want to add just a few, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">&lt;filename&gt;</span></code> to add that one. If you want to add all, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">*</span></code>, which uses * to mean “everything”.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Commit your changes</dt><dd><ul class="simple">
+<li><p>What you just did was <em>not</em> save the files. You told git specifically which files you want to save. Now you can save them using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&lt;message&gt;</span></code>. The message is necessary to indicate what changes you’re making to the repository. That way, when you look at the history of your file, you can find the time/date when a change was made. Plus, if you want, you can look at the code before that change was made!</p></li>
+<li><p>If you forget the -m, you might be thrown into a vim entry, which you can leave by typing “ESC” and “:wq”. Don’t forget the -m!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Push, if needed</dt><dd><ul class="simple">
+<li><p>You just committed your changes, but they only exist on your local machine. If that’s all you want to do, no worries, you’re done! If you do want to push your changes to GitHub/etc. keep reading</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to send your changes to the remote repository. If you have an error because there is no remote, then you may not have linked the remote repository to the one on your computer. Try using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">&lt;remote</span> <span class="pre">URL&gt;</span></code> and then <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span> <span class="pre">master</span></code>. This will link the two, and you can now use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> regularly</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -87,7 +187,7 @@
 <li class="toctree-l1"><a class="reference internal" href="timeshare_help.html">Working with the Unix Timeshare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ_topics.html">FAQ Topics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lec0.html">Lecture 0 Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lec1.html">Lecture 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec1.html">Lecture 1 Reading List</a></li>
 </ul>
 
 <div class="relations">
