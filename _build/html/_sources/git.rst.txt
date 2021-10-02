@@ -71,3 +71,9 @@ I want to make my own git repository
 * Push, if needed
     * You just committed your changes, but they only exist on your local machine. If that's all you want to do, no worries, you're done! If you do want to push your changes to GitHub/etc. keep reading
     * Use ``git push`` to send your changes to the remote repository. If you have an error because there is no remote, then you may not have linked the remote repository to the one on your computer. Try using ``git remote add origin <remote URL>`` and then ``git push --set-upstream origin master``. This will link the two, and you can now use ``git push`` regularly
+
+Starting Homework Assignment 1
+-------------------------------------
+
+- The above is a guide for starting with git. Now, since you know how to do that stuff, you can easily follow those steps to get the remote git repository.
+    - On the instructions, Professor Litz provides us a link to clone (https://code.videolan.org/videolan/x264). Follow the above steps for cloning a repository to your local machine. Don't worry, it's not too hard. The resulting folder is called 'x264'.
