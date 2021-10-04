@@ -8,8 +8,9 @@ Welcome to Matt's CSE120 documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: General:
 
+   homework_1
    linux_help
    git
    timeshare_help
