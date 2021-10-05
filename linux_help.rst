@@ -14,7 +14,7 @@ Installing Linux on your Computer
 ----------------------------------------
 
 - Virtual Machine Install (RECOMMENDED)
-    - Watch this video I made for a step-by-step guide to install Linux on VirtualBox: https://youtu.be/eSqxaE2zzWs
+    - Watch this video I made for a step-by-step guide to install Linux on VirtualBox: https://youtube.com/playlist?list=PLRtYQk6Dce3qp_i2fEkwVl8BCNceqeAM_
 
 - Other options
     - You can also install Ubuntu on a flash drive, which is very convenient I think. Give it a whirl sometime (use Balena-Etcher to copy the installed to a flash drive, and then reboot into the flash drive through your BIOS)
